@@ -1,0 +1,19 @@
+{% extends 'content.html' %}
+
+{% block body %}
+
+<div class="jumbotron">
+  <h1 class="display-4">Enter a URL</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+</div>
+<div class="container">
+  {% from "includes/_formhelpers.html" import render_field %}
+<form action="" method="POST">
+  <div class="form-group">
+    {{render_field(form.url, class_="form-control")}}
+  </div>
+  <p><input type="submit" class="btn btn-primary" value="Submit" data-toggle="modal" data-target="#mymodal"></p>
+
+</form>
+</div>
+{% endblock %}
